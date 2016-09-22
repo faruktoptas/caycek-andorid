@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "148179462394",
+    "firebase_url": "https://caycek-f1852.firebaseio.com",
+    "project_id": "caycek-f1852",
+    "storage_bucket": "caycek-f1852.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148179462394:android:c26f3b2a54aaad44",
+        "android_client_info": {
+          "package_name": "com.caycek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148179462394-f1glhhn4resuqdh4obhl3v3ia74kf3s1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.caycek",
+            "certificate_hash": "0ABB1D85B689EA6E5E0BFCE98A42B5FFB8DA7AC2"
+          }
+        },
+        {
+          "client_id": "148179462394-9b5lck0n4alg9tguscnavugijbqbtrrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2cK0cjTuxPPKceKZyB1OUD4gp7LydiW8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148179462394-9b5lck0n4alg9tguscnavugijbqbtrrl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
