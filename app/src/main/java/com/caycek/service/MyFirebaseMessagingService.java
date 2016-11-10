@@ -30,7 +30,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         // Check if message contains a data payload.
         if (remoteMessage.getData().size() > 0) {
             Log.d(TAG, "Message data payload: " + remoteMessage.getData());
-            showSimpleNotification(remoteMessage.getData().get("message"));
+            String pushMessage = remoteMessage.getData().get("message");
+            showSimpleNotification(pushMessage);
+            String sender = pushMessage.substring(0, pushMessage.indexOf(":"));
+            PreferenceWrapper.getInstance().writeLastPush(sender + " " + CaycekUtils.getTimeStamp());
+            Intent intent = new Intent();
+            intent.setAction("refresh");
+            LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
         }
 
         // Check if message contains a notification payload.
@@ -38,12 +44,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
 
             showSimpleNotification(remoteMessage.getNotification().getBody());
-            String pushMessage = remoteMessage.getData().get("message");
-            String sender = pushMessage.substring(0, pushMessage.indexOf(":"));
-            PreferenceWrapper.getInstance().writeLastPush(sender + " " + CaycekUtils.getTimeStamp());
-            Intent intent = new Intent();
-            intent.setAction("refresh");
-            LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(intent);
+
         }
     }
 
