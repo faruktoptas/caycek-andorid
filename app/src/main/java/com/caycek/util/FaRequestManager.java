@@ -1,4 +1,4 @@
-package com.caycek;
+package com.caycek.util;
 
 /**
  * Created by faruktoptas on 22/09/16.
