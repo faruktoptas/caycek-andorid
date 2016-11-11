@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static final String FCM_TOPIC = "cay";
     public static final String FCM_MESSAGE = "%s: Çay çek";
     private static final int REQ_CODE_PERM = 1001;
-    public static final int COOL_DOWN = 5000;
+    public static final int COOL_DOWN = 20000;
     public static final int PERIOD = 50;
 
     private DonutProgress mDonutProgress;
